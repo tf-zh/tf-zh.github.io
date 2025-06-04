@@ -1,0 +1,6 @@
+/dist
+*.yaml
+/docs-dist
+/packages
+packages/*/*.js
+packages/*/*.jsx

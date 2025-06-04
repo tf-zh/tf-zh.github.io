@@ -1,0 +1,40 @@
+ame: deploy to mynus
+
+on:
+  push:
+    branches: ["master"]
+
+env:
+  PROJECT_NAME: tensorflow-model
+  BARE_REPO_DIR: /gitea/repositories/devlifestyle/tensorflow-model.git # use my repo path
+  CLONED_REPO_DIR: /web/_sites_/tensorflow-model/temp
+  DEPLOYED_DIR: /web/_sites_/tensorflow-model
+
+jobs:
+  clone:
+    name: Download Repo
+    runs-on: mynas
+    steps:
+      - name: check version
+        run: |
+          node -v
+          pnpm -v
+      - name: clone git
+        run: |
+          rm -rf $CLONED_REPO_DIR
+          git clone $BARE_REPO_DIR $CLONED_REPO_DIR
+      - name: build
+        run: |
+          ls -l $CLONED_REPO_DIR
+          echo 'chmod 777 -R $DEPLOYED_DIR'
+          umask 000
+          echo 'ls -ld $DEPLOYED_DIR'
+          cd $CLONED_REPO_DIR && pnpm store prune && pnpm i && pnpm run build:master
+
+  deploy:
+    runs-on: mynas
+    needs: Build tensorflow-model
+    steps:
+      - run: cp $CLONED_REPO_DIR/dist/* -Rf $DEPLOYED_DIR
+      # - run: cp $CLONED_REPO_DIR/dist/* -Rf $DEPLOYED_DIR/app
+      - run: rm -rf $CLONED_REPO_DIR

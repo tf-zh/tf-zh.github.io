@@ -1,0 +1,62 @@
+{
+  "name": "@jzx/knn-classifier",
+  "version": "0.1.5",
+  "keywords": [
+    "tensorflow",
+    "tensorflow.js",
+    "knn-classifier"
+  ],
+  "description": "KNN Classifier for TensorFlow.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/knn-classifier.min.js",
+  "jsdelivr": "dist/knn-classifier.min.js",
+  "jsnext:main": "dist/knn-classifier.esm.js",
+  "module": "dist/knn-classifier.esm.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@rollup/plugin-typescript": "3.1.1",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0",
+    "@types/jasmine": "^3.6.3",
+    "babel-core": "~6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "jasmine": "^3.6.4",
+    "jasmine-core": "~3.1.0",
+    "rimraf": "~2.6.2",
+    "rollup": "~2.38.0",
+    "rollup-plugin-uglify": "~3.0.0",
+    "ts-node": "~5.0.0",
+    "tslint": "~5.18.0",
+    "typescript": "~5.1.6"
+  },
+  "scripts": {
+    "build": "father build",
+    "lint": "tslint -p . -t verbose",
+    "test": "ts-node --skip-ignore --project tsconfig.test.json run_tests.ts"
+  },
+  "license": "ISC",
+  "author": "devlifestyle",
+  "homepage": "https://git.jzxer.cn/devlifestyle/tensorflow-model",
+  "bugs": {
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model/issues",
+    "email": "jzx710328466@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://git.jzxer.cn/api/packages/devlifestyle/npm/"
+  },
+  "dependencies": {
+    "@jzx/knn-classifier": "workspace:^",
+    "@tensorflow-models/mobilenet": "2.1.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0"
+  }
+}

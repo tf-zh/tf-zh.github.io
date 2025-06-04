@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "chrome",
+      "name": "lambo",
+      "request": "launch",
+      "url": "http://localhost:8000/metas"
+    }
+  ]
+}

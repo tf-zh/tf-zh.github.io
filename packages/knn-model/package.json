@@ -1,0 +1,55 @@
+{
+  "name": "@jzx/knn-model-v1",
+  "version": "0.1.4",
+  "description": "自训练knn模型",
+  "keywords": [
+    "knn-model",
+    "tensorflow",
+    "tensorflowjs"
+  ],
+  "license": "ISC",
+  "author": "devlifestyle",
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build"
+  },
+  "homepage": "https://git.jzxer.cn/devlifestyle/tensorflow-model",
+  "bugs": {
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model/issues",
+    "email": "jzx710328466@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://git.jzxer.cn/api/packages/devlifestyle/npm/"
+  },
+  "dependencies": {
+    "@jzx/knn-classifier": "workspace:^",
+    "@tensorflow-models/mobilenet": "2.1.0",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+    "@tensorflow/tfjs-converter": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0",
+    "@tensorflow/tfjs-layers": "^4.22.0",
+    "ahooks": "^3.8.4"
+  },
+  "devDependencies": {
+    "antd": "^5.23.1"
+  }
+}

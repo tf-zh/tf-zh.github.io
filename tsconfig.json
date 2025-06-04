@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "composite": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"]
+    },
+    "importHelpers": false,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "moduleResolution": "Node",
+    "isolatedModules": false,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "stripInternal": true,
+    "resolveJsonModule": true,
+    "types": [
+    ]
+  },
+  "include": [".dumirc.ts", "src/**/*", "packages/**/*", "global.d.ts"],
+  "exclude": ["node_modules", "lib", "es", ".dumi", "src/**/es/**", "src/**/lib/**"]
+}
