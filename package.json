@@ -14,7 +14,6 @@
   ],
   "scripts": {
     "add": "pnpm changeset add",
-    "build:master": "dumi build",
     "build:watch": "father dev",
     "dev": "dumi dev",
     "docs:build": "dumi build",
