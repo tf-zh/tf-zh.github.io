@@ -2,10 +2,10 @@ import { defineConfig } from 'dumi';
 import path from 'path';
 
 export default defineConfig({
-  logo: '/logo.jpeg',
-  favicons: ['/logo.jpeg'],
+  logo: '/tf.png',
+  favicons: ['/tf.png'],
   themeConfig: {
-    name: 'ts-model',
+    name: 'tf.js',
     socialLinks: {
       github: 'https://git.jzxer.cn/devlifestyle/tensorflow-model',
     },
@@ -24,5 +24,6 @@ export default defineConfig({
     srcDir: ['packages', 'src'],
     peerDeps: true,
   },
+  plugins: ['dumi-plugin-color-chunk'],
   esbuildMinifyIIFE: false
 });

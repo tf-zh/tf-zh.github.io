@@ -1,0 +1,56 @@
+{
+  "name": "@tf-model/posenet",
+  "version": "0.1.0",
+  "description": "自训练knn模型",
+  "keywords": [
+    "knn-model",
+    "tensorflow",
+    "tensorflowjs"
+  ],
+  "license": "ISC",
+  "author": "devlifestyle",
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build"
+  },
+  "homepage": "https://git.jzxer.cn/devlifestyle/tensorflow-model",
+  "bugs": {
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model/issues",
+    "email": "jzx710328466@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.jzxer.cn/devlifestyle/tensorflow-model"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://git.jzxer.cn/api/packages/devlifestyle/npm/"
+  },
+  "dependencies": {
+    "@tensorflow-models/posenet": "^2.1.2",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+    "@tensorflow/tfjs-converter": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0",
+    "@tensorflow/tfjs-layers": "^4.22.0",
+    "ahooks": "^3.8.4",
+    "antd": "^5.23.1"
+  },
+  "devDependencies": {
+    "dat.gui": "^0.7.2",
+    "howler": "^2.1.0"
+  }
+}

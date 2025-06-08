@@ -84,5 +84,6 @@
     "devlifestyle<jzx710328466@gmail.com>"
   ],
   "dependencies": {
+    "dumi-plugin-color-chunk": "^2.1.0"
   }
 }
